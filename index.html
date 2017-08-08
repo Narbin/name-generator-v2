@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="nameGenerator">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <title>Name generator v2</title>
 </head>
-<body>
-    <script src="js/app.js"></script>
+<body ng-controller="app">
+	<header>
+		<h1>Name generator v2<h1>
+	</header>
+	<main>
+		<label>
+			Długość imienia: {{length}} 
+			<br>
+			<input type="range" min="6" max="64" step="1" ng-model="length">
+		</label>
+		<br>
+		<label>Męskie: <input type="radio" ng-model="gender" value="male"></label>
+		<br>
+		<label>Żeńskie: <input type="radio" ng-model="gender" value="female"></label>
+		<br>
+		<label>Hasło: <input type="text" ng-model="generatedPassword" id="pass"></label>
+	</main>
+	<footer>
+		
+	</footer>
+    <script src="dist/js/app.js"></script>
 </body>
 </html>
