@@ -1,0 +1,21 @@
+//colors
+$dark-blue-bg:			rgba(42, 68, 128, 0.4); //ciemny niebieski transparentny
+$dark-blue: 			#095594;				//ciemny niebieski
+$gray-dark-blue:		#3B78AB;				//brudny niebieski
+$blue:					#1D8AE4;				//niebieski
+$light-blue:			#53AAF2;				//jasno niebieski
+$very-light-blue:		#7EBDF2;				//bardzo jasny niebieski
+$orange:				#FFC87C;				//pomarańczowy
+
+//RWD
+$page-width: 			100%;
+$page-width-S: 			320px;
+$page-width-M: 			768px;
+$page-width-L: 			1024px;
+$page-width-XL: 		1280px;
+$page-width-XXL: 		1440px;
+$page-width-XXXL: 		1920px;
+$page-width-XXXXL: 		2000px;
+
+$page-min-width: 320px;
+$page-max-width: $page-width-XXXXL;

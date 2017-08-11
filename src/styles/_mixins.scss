@@ -1,0 +1,37 @@
+//RWD
+@mixin media($size-letter) {
+
+	$var-size: 0;
+
+	@if $size-letter == 'S' {
+		$var-size: $page-width-S;
+	}
+	
+	@else if $size-letter == 'M' {
+		$var-size: $page-width-M;
+	}
+	
+	@else if $size-letter == 'L' {
+		$var-size: $page-width-L;
+	}
+	
+	@else if $size-letter == 'XL' {
+		$var-size: $page-width-XL;
+	}
+	
+	@else if $size-letter == 'XXL' {
+		$var-size: $page-width-XXL;
+	}
+	
+	@else if $size-letter == 'XXXL' {
+		$var-size: $page-width-XXXL;
+	}
+
+	@else if $size-letter == 'XXXXL' {
+		$var-size: $page-width-XXXXL;
+	}
+	
+	@media screen and (min-width: $var-size) {
+		@content;
+	}
+}

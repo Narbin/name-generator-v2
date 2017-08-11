@@ -1,0 +1,125 @@
+//components
+@import 'normalize.css';
+@import '_setup.scss';
+@import '_mixins.scss';
+
+body {
+	padding: 5px;
+	font-family: sans-serif;
+	background-image: url(../images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+header {
+	text-align: center;
+
+	@include media(S) {
+		width: 100%;
+		margin: 5px, 10px;
+	}
+	@include media(M) {
+		width: 500px;
+		margin: auto;
+	}
+	.title {
+		font-size: 35px;
+		color: $very-light-blue;
+		margin: 50px 0px;
+		position: relative;
+
+		.new-text {
+			font-size: 14px;
+			position: absolute;
+			top: 25px;
+			left: calc(50% + 117px);
+			transform: rotate(-20deg);
+			color: $orange;
+			border: 1px solid $orange;
+			border-radius: 5px;
+			padding: 3px;
+		}
+	}
+
+
+}
+
+.container {
+	font-size: 20px;
+	color: $dark-blue;
+	background-color: $dark-blue-bg;
+	border: $very-light-blue solid 2px;
+	border-radius: 5px;
+
+	@include media(S) {
+		margin: 5px 10px;
+	}
+	@include media(M) {
+		width: 500px;
+		margin: auto;
+	}
+
+	.option {
+		margin: 5px 4px;
+		display: block;
+		background-color: $light-blue;
+		padding: 3px;
+
+		input[type=range] {
+			width: 100%;
+		}
+
+		input[type=text] {
+			width: calc(100% - 42px);
+		}
+
+		&:first-child {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		&:last-child {
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			position: relative;
+		}
+	}
+
+	.gen-button-holder {
+		text-align: center;
+		.gen-button {
+			width: 100%;
+			border: solid 2px $dark-blue;
+			background-color: $blue;
+			color: $very-light-blue;
+			border-radius: 5px;
+			&:active {
+				background-color: $orange;
+				color: $dark-blue;
+			}
+			&:hover {
+				box-shadow: inset 0px 0px 4px 1px $dark-blue-bg;
+			}
+		}
+	}
+
+	.clipboard {
+		width: 27px;
+		border: solid 1px $orange;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-bottom: -8px;
+		&:hover {
+			background-color: $dark-blue;
+		}
+	}
+
+	.copy-me {
+		position: absolute;
+		color: $orange;
+		right: 25px;
+		bottom: -33px;
+		transform: rotateZ(-15deg);
+	}
+}
