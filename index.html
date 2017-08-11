@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html ng-app="nameGenerator">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="dist/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-    <title>Name generator v2</title>
+	<title>Name generator v2</title>
 </head>
 <body ng-controller="app">
 	<header>
-		<h1>Name generator v2<h1>
+		<section class="title">Name generator v2		
+			<section class="new-text">
+				New!
+			</section>
+		</section>
 	</header>
-	<main>
-		<label>
-			Długość imienia: {{length}} 
+	<main class="container">
+		<section class="option">
+			<label>
+				Długość imienia: {{length}} 
+				<br>
+				<input type="range" min="6" max="15" step="1" ng-model="length">
+			</label>
+		</section>
+		<section class="option">
+			<label>Męskie: <input type="radio" ng-model="gender" value="male"></label>
+			<label>Żeńskie: <input type="radio" ng-model="gender" value="female"></label>
+		</section>
+		<section class="option gen-button-holder">
+			<button type="button" ng-click="" class="gen-button">Generuj!</button>
+		</section>
+		<section class="option">
+			<label>Imię: 
 			<br>
-			<input type="range" min="6" max="64" step="1" ng-model="length">
-		</label>
-		<br>
-		<label>Męskie: <input type="radio" ng-model="gender" value="male"></label>
-		<br>
-		<label>Żeńskie: <input type="radio" ng-model="gender" value="female"></label>
-		<br>
-		<label>Hasło: <input type="text" ng-model="generatedPassword" id="pass"></label>
+			<input type="text" ng-model="generatedName" id="name"></label>
+			<img src="dist/images/clipboard.svg" alt="copy" class="clipboard" ng-click="">
+			<div class="copy-me">Skopiuj mnie!&#129149;</div>
+		</section>
 	</main>
 	<footer>
 		
 	</footer>
-    <script src="dist/js/app.js"></script>
+	<script src="dist/js/app.js"></script>
 </body>
 </html>
