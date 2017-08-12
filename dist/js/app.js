@@ -72,4 +72,11 @@
 			return Math.floor(Math.random() * to) + from;
 		};
 	});
+
+	angular.module('nameGenerator.controllers').controller('CopyController', function ($scope) {
+		$scope.copyToClipboard = function () {
+			var nameContainer = document.getElementById("name").select(); //first select name
+			document.execCommand("copy", nameContainer); // now copy from container
+		};
+	});
 })();
