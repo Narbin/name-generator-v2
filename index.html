@@ -8,7 +8,7 @@
 
 	<title>Name generator v2</title>
 </head>
-<body ng-controller="app">
+<body ng-controller="AppController">
 	<header>
 		<section class="title">Name generator v2		
 			<section class="new-text">
@@ -16,7 +16,7 @@
 			</section>
 		</section>
 	</header>
-	<main class="container">
+	<main class="container" ng-controller="GeneratorController">
 		<section class="option">
 			<label>
 				Długość imienia: {{length}} 
@@ -29,7 +29,7 @@
 			<label>Żeńskie: <input type="radio" ng-model="gender" value="female"></label>
 		</section>
 		<section class="option gen-button-holder">
-			<button type="button" ng-click="" class="gen-button">Generuj!</button>
+			<button type="button" ng-click="generateName()" class="gen-button">Generuj!</button>
 		</section>
 		<section class="option">
 			<label>Imię: 
